@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" contento="Kalvin Albuquerque">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <div id="main"> <!-- START MAIN DIV  -->
+
+        <h2>Calculator</h2>
+
+        <div id="operations">
+            <div id="previous-operation">
+                <input type="text" id="display-operation">
+            </div> 
+
+            <div id="current-operation">
+                <input type="text"  id="operation"> 
+            </div>
+
+        </div>
+
+        <div id="buttons-container">
+
+            <button type=button onclick="calculate('action', 'clear')" id="clear-button"> CE</button>
+            <button type="button" onclick="calculate('action', 'del')">DEL</button>
+            
+            <button type="button" onclick="calculate('action', 'sqrt')" >&#8730;	</button>
+            <button type="button" onclick="calculate('action','^')"> X<sup>y</sup> </button>
+            
+            <button type="button" onclick="calculate('action', '+')">+</button>
+            <button type="button" onclick="calculate('action', '-')">-</button>
+            <button type="button" onclick="calculate('action', '*')" >&#215;</button>
+            <button type="button" onclick="calculate('action', '/')">&#247;</button>
+            
+            
+            <button type="button" onclick="calculate('number', '1')">1</button>
+            <button type="button" onclick="calculate('number', '2')">2</button>
+            <button type="button" onclick="calculate('number', '3')">3</button>
+            
+            
+            
+            <button type="button" onclick="calculate('number', '4')">4</button>
+            <button type="button" onclick="calculate('number', '5')">5</button>
+            <button type="button" onclick="calculate('number', '6')">6</button>
+            <button type="button" onclick="calculate('number', '7')">7</button>
+            <button type="button" onclick="calculate('number', '8')">8</button>
+            <button type="button" onclick="calculate('number', '9')">9</button>
+            <button type="button" onclick="calculate('number', '0')">0</button>
+            
+            <button type="button" onclick="calculate('number', '.')">.</button>
+            <button id="equal-button" type="button" onclick="calculate('action', 'equal')">=</button>
+
+        </div>
+
+    </div> <!-- END MAIN DIV  -->
+</body>
+</html>

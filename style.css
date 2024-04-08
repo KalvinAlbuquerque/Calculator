@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    background-color: #302e2e;
+}
+
+#main
+{
+    width: 400px;
+    padding: .5em;
+    background-color: rgb(68, 65, 65);
+    display: flex;
+    flex-direction: column;
+}
+
+#operations
+{
+    text-align: right;
+}
+
+#previous-operation
+{
+    color: #272424;
+    padding: 0.2em;
+    overflow-wrap: break-word; /* Quebra a linha, caso vaze dos limites do container */
+    min-height: 1.6em; /* Define a altura mínima de um elemento. O mínimo aqui é 1.6em, mas pode crescer conforme o conteudo do contêiner. */
+    font-size: 2em;
+}
+
+#previous-operation input[type="text"] 
+{
+    background-color: inherit; /* Herda a cor de fundo do elemento pai */
+    color: inherit; /* Herda a cor de texto do elemento pai */
+    font-family: inherit; /* Herda a família de fontes do elemento pai */
+    font-size: inherit; /* Herda o tamanho da fonte do elemento pai */
+    border: none; /* Remove a borda padrão do input */
+    padding: 0; /* Remove o preenchimento padrão do input */
+    outline: none; /* Remove a aparência do foco do input */
+    width: 100%; /* Garante que o input preencha toda a largura da div pai */
+    overflow-wrap: break-word;
+    text-align: right;
+
+}
+
+
+#current-operation
+{
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#current-operation input[type="text"] {
+    background-color: inherit; /* Herda a cor de fundo do elemento pai */
+    color: inherit; /* Herda a cor de texto do elemento pai */
+    font-family: inherit; /* Herda a família de fontes do elemento pai */
+    font-size: inherit; /* Herda o tamanho da fonte do elemento pai */
+    border: none; /* Remove a borda padrão do input */
+    padding: 0; /* Remove o preenchimento padrão do input */
+    outline: none; /* Remove a aparência do foco do input */
+    width: 100%; /* Garante que o input preencha toda a largura da div pai */
+    overflow-wrap: break-word;
+    text-align: right;
+}
+
+
+#buttons-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cada linha do meu grid terá 4 colunas */
+    grid-gap: 3px; /* Propriedade que define o espaçamento entre as linhas de uma grid */
+}
+
+#buttons-container button
+{
+    border: 1px solid transparent;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: whitesmoke;
+    cursor: pointer; /* O ponteiro do mouse aparece quando passa em cima do button */
+}
+
+#buttons-container button:hover /* Hover -> quando passa o mouse por cima */
+{
+    background-color: rgb(153, 182, 182);
+}
+
+#buttons-container #equal-button
+{
+    grid-column:  span 3 ; /* Aqui to mesclando células da grade horizontalmente*/
+    background-color: rgb(143, 195, 229);
+}
+
+#buttons-container #clear-button
+{
+    grid-column: span 3; /* Aqui to mesclando células da grade horizontalmente*/
+    background-color: rgb(143, 195, 229);
+}
